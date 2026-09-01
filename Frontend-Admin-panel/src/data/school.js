@@ -27,5 +27,5 @@ export const currentUser = {
   name: "Jeet Ahirwar",
   role: "Administrator",
   email: "jeet.ahirwar@brightwoodschool.edu.in",
-  avatar: "../public/Passportsize-photo-Jeet.jpeg",
+  avatar: "/public/Passportsize-photo-Jeet.jpeg",
 };
