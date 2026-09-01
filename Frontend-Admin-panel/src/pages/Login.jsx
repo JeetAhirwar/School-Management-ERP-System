@@ -68,7 +68,7 @@ export default function Login() {
               <div className="relative">
                 <Mail size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-text/40" />
                 <input
-                  defaultValue="anjali.verma@brightwoodschool.edu.in"
+                  defaultValue="jeetahirwar664@gmail.com"
                   className="w-full pl-10 pr-3.5 py-3 rounded-lg border border-black/10 text-[13.5px] outline-none focus:border-ink/40 bg-white"
                 />
               </div>
@@ -79,7 +79,7 @@ export default function Login() {
                 <Lock size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-text/40" />
                 <input
                   type="password"
-                  defaultValue="••••••••••"
+                  defaultValue="Jeet@1234"
                   className="w-full pl-10 pr-3.5 py-3 rounded-lg border border-black/10 text-[13.5px] outline-none focus:border-ink/40 bg-white"
                 />
               </div>

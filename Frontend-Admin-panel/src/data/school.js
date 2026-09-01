@@ -2,7 +2,7 @@ export const school = {
   name: "Brightwood International School",
   shortName: "Brightwood",
   tagline: "Nurturing Minds, Building Futures",
-  address: "142, Vijay Nagar, Indore, Madhya Pradesh 452010",
+  address: "143, New Market, Bhopal, Madhya Pradesh 462001",
   affiliation: "CBSE Affiliation No. 1930456",
   session: "2026–27",
   logo: "🎓",

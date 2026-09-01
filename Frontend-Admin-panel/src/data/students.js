@@ -36,7 +36,7 @@ export const students = Array.from({ length: 60 }).map((_, i) => {
     motherName: `${["Sunita","Pooja","Kavita","Neha","Rekha","Meena","Shweta","Ritu"][i % 8]} ${ln}`,
     contact: `+91 ${70000 + i * 137}${10000 + i}`.slice(0, 13),
     email: `${fn.toLowerCase()}.${ln.toLowerCase()}${i}@brightwoodschool.edu.in`,
-    address: `House No. ${12 + i}, ${["Vijay Nagar","Palasia","Bhawarkuan","Rajwada","Sudama Nagar","Rau"][i % 6]}, Indore`,
+    address: `House No. ${12 + i}, ${["Arera Colony","MP Nagar","BHEL","Kolar Road","Nayapura","Hoshangabad Road"][i % 6]}, Bhopal`,
     attendance,
     feeStatus,
     avatar: `https://ui-avatars.com/api/?name=${fn}+${ln}&background=${color}&color=fff&bold=true`,

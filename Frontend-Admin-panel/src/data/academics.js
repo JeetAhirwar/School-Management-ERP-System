@@ -58,12 +58,82 @@ export const inventory = [
 ];
 
 export const busRoutes = [
-  { id: "BUS-01", route: "Vijay Nagar — Palasia — School", driver: "Mahesh Chouhan", conductor: "Ramesh Bhai", capacity: 45, occupied: 38, status: "On Route", lastStop: "Palasia Square", eta: "8 mins", lat: 22.7346, lng: 75.8930 },
-  { id: "BUS-02", route: "Bhawarkuan — Rajwada — School", driver: "Suraj Yadav", conductor: "Vinod Kumar", capacity: 45, occupied: 41, status: "On Route", lastStop: "Rajwada Circle", eta: "14 mins", lat: 22.7196, lng: 75.8577 },
-  { id: "BUS-03", route: "Sudama Nagar — Rau — School", driver: "Dilip Rathore", conductor: "Sanjay Bhai", capacity: 40, occupied: 30, status: "Delayed", lastStop: "Rau Circle", eta: "22 mins", lat: 22.6608, lng: 75.7936 },
-  { id: "BUS-04", route: "MR-10 — Scheme 78 — School", driver: "Naresh Solanki", conductor: "Anil Kumar", capacity: 45, occupied: 44, status: "On Route", lastStop: "Scheme 78 Gate", eta: "6 mins", lat: 22.7530, lng: 75.9070 },
-  { id: "BUS-05", route: "AB Road — LIG — School", driver: "Prakash Tiwari", conductor: "Mukesh Bhai", capacity: 40, occupied: 25, status: "Not Started", lastStop: "Depot", eta: "—", lat: 22.7042, lng: 75.8825 },
+  {
+    id: "BUS-01",
+    route: "Arera Colony — MP Nagar — School",
+    driver: "Mahesh Chouhan", conductor: "Ramesh Bhai",
+    driverPhone: "+91 98260 12345", conductorPhone: "+91 98260 54321",
+    capacity: 45, occupied: 38, status: "On Route",
+    lastStop: "MP Nagar Zone-1", eta: "8 mins", speed: 34,
+    cctvCount: 4,
+    lat: 23.2377, lng: 77.4320,
+    waypoints: [
+      [23.2390, 77.4350], [23.2365, 77.4330], [23.2377, 77.4320],
+      [23.2500, 77.4240], [23.2580, 77.4160], [23.2599, 77.4126],
+    ],
+  },
+  {
+    id: "BUS-02",
+    route: "BHEL — Awadhpuri — School",
+    driver: "Suraj Yadav", conductor: "Vinod Kumar",
+    driverPhone: "+91 98930 22456", conductorPhone: "+91 98930 65432",
+    capacity: 45, occupied: 41, status: "On Route",
+    lastStop: "Awadhpuri Sector-1", eta: "14 mins", speed: 28,
+    cctvCount: 4,
+    lat: 23.2720, lng: 77.4370,
+    waypoints: [
+      [23.2760, 77.4360], [23.2700, 77.4360], [23.2720, 77.4370],
+      [23.2650, 77.4280], [23.2600, 77.4190], [23.2599, 77.4126],
+    ],
+  },
+  {
+    id: "BUS-03",
+    route: "Kolar Road — Nayapura — School",
+    driver: "Dilip Rathore", conductor: "Sanjay Bhai",
+    driverPhone: "+91 94250 77890", conductorPhone: "+91 94250 88901",
+    capacity: 40, occupied: 30, status: "Delayed",
+    lastStop: "Kolar Junction", eta: "22 mins", speed: 18,
+    cctvCount: 4,
+    lat: 23.1950, lng: 77.3850,
+    waypoints: [
+      [23.1756, 77.3600], [23.1850, 77.3720], [23.1950, 77.3850],
+      [23.2100, 77.4000], [23.2400, 77.4100], [23.2599, 77.4126],
+    ],
+  },
+  {
+    id: "BUS-04",
+    route: "Hoshangabad Road — Bawadiya — School",
+    driver: "Naresh Solanki", conductor: "Anil Kumar",
+    driverPhone: "+91 90098 33441", conductorPhone: "+91 90098 55442",
+    capacity: 45, occupied: 44, status: "On Route",
+    lastStop: "Bawadiya Kalan", eta: "6 mins", speed: 41,
+    cctvCount: 6,
+    lat: 23.2400, lng: 77.4700,
+    waypoints: [
+      [23.1951, 77.4650], [23.2150, 77.4660], [23.2400, 77.4700],
+      [23.2550, 77.4500], [23.2599, 77.4126],
+    ],
+  },
+  {
+    id: "BUS-05",
+    route: "Ashoka Garden — Shahpura — School",
+    driver: "Prakash Tiwari", conductor: "Mukesh Bhai",
+    driverPhone: "+91 92290 11223", conductorPhone: "+91 92290 33445",
+    capacity: 40, occupied: 25, status: "Not Started",
+    lastStop: "Depot", eta: "—", speed: 0,
+    cctvCount: 4,
+    lat: 23.2530, lng: 77.4700,
+    waypoints: [
+      [23.2528, 77.4800], [23.2530, 77.4700],
+      [23.2590, 77.4500], [23.2599, 77.4126],
+    ],
+  },
 ];
+
+export const transportDesk = {
+  name: "Transport Office — Brightwood School, Bhopal",
+  phone: "+91 755 400 2200",
+};
 
 export const attendanceTrend = [
   { month: "Apr", attendance: 94 },
