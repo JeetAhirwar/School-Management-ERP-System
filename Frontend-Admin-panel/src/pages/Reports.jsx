@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import { Download, FileBarChart2, Plus, X, Trash2, Search, FilePlus2 } from "lucide-react";
 import {
   BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Legend,
@@ -54,7 +55,7 @@ function emptyForm() {
 }
 
 export default function Reports() {
-  const [reports, setReports] = useState(INITIAL_REPORTS);
+  const [reports, setReports] = useLocalStorage("sap_reports", INITIAL_REPORTS);
   const [query, setQuery] = useState("");
   const [typeFilter, setTypeFilter] = useState("All");
   const [showModal, setShowModal] = useState(false);

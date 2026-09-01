@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import {
   Plus, MapPin, Clock, X, Save, Pencil, CalendarDays,
   Search, PartyPopper
@@ -52,7 +53,7 @@ function emptyForm() {
 }
 
 export default function Events() {
-  const [events, setEvents] = useState(initialEvents);
+  const [events, setEvents] = useLocalStorage("sap_events", initialEvents);
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
   const [view, setView] = useState("upcoming"); // upcoming | past | all

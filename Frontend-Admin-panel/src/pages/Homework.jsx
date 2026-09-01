@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import {
   Plus, BookOpenCheck, Search, Calendar, User, X, Save,
   CheckCircle2, Clock, AlertCircle, Filter
@@ -54,7 +55,7 @@ function emptyForm() {
 }
 
 export default function Homework() {
-  const [items, setItems] = useState(initialHomework);
+  const [items, setItems] = useLocalStorage("sap_homework", initialHomework);
   const [cls, setCls] = useState("All");
   const [statusFilter, setStatusFilter] = useState("All");
   const [query, setQuery] = useState("");

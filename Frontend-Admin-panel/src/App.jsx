@@ -17,6 +17,10 @@ import OnlinePayment from "./pages/OnlinePayment";
 import Inventory from "./pages/Inventory";
 import BusTracking from "./pages/BusTracking";
 import Reports from "./pages/Reports";
+import Library from "./pages/Library";
+import Leave from "./pages/Leave";
+import Hostel from "./pages/Hostel";
+import Payroll from "./pages/Payroll";
 
 export default function App() {
   return (
@@ -40,6 +44,10 @@ export default function App() {
           <Route path="/inventory" element={<Inventory />} />
           <Route path="/bus-tracking" element={<BusTracking />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/library" element={<Library />} />
+          <Route path="/leave" element={<Leave />} />
+          <Route path="/hostel" element={<Hostel />} />
+          <Route path="/payroll" element={<Payroll />} />
         </Route>
       </Routes>
     </BrowserRouter>

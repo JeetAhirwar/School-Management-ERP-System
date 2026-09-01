@@ -126,3 +126,33 @@ export function Select({ className = "", children, ...props }) {
     </select>
   );
 }
+
+// Lightweight toast/toaster helpers -------------------------------------------
+export function toast(message, tone = "success") {
+  const tones = {
+    success: { bg: "#3F8F5F", icon: "✓" },
+    error: { bg: "#D65A4A", icon: "✕" },
+    info: { bg: "#3B6FA0", icon: "ℹ" },
+    amber: { bg: "#C9832A", icon: "!" },
+  };
+  const t = tones[tone] || tones.success;
+  const el = document.createElement("div");
+  el.className = "toast-item";
+  el.style.setProperty("--toast-bg", t.bg);
+  el.innerHTML = `<span class="toast-icon">${t.icon}</span><span class="toast-msg"></span>`;
+  el.querySelector(".toast-msg").textContent = message;
+  const container =
+    document.querySelector(".toast-container") ||
+    (() => {
+      const c = document.createElement("div");
+      c.className = "toast-container";
+      document.body.appendChild(c);
+      return c;
+    })();
+  container.appendChild(el);
+  requestAnimationFrame(() => el.classList.add("toast-visible"));
+  setTimeout(() => {
+    el.classList.remove("toast-visible");
+    setTimeout(() => el.remove(), 300);
+  }, 3200);
+}

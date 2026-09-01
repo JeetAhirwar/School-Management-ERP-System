@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import {
   Plus, Wallet, TrendingUp, AlertTriangle, Receipt, X, Save,
   Search, Pencil, Trash2
@@ -37,7 +38,7 @@ function emptyForm() {
 }
 
 export default function FeesCollection() {
-  const [transactions, setTransactions] = useState(initialTransactions);
+  const [transactions, setTransactions] = useLocalStorage("sap_fee_transactions", initialTransactions);
   const [query, setQuery] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
   const [showModal, setShowModal] = useState(false);

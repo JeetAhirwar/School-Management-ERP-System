@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import {
   Plus, Boxes, AlertTriangle, PackageCheck, X, Save, Search,
   Pencil, Trash2, Minus, ArrowUpRight, PackagePlus
@@ -37,7 +38,7 @@ function nextId(current) {
 }
 
 export default function Inventory() {
-  const [items, setItems] = useState(initialInventory);
+  const [items, setItems] = useLocalStorage("sap_inventory", initialInventory);
   const [query, setQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [showModal, setShowModal] = useState(false);

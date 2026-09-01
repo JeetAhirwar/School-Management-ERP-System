@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import {
   Pin, Plus, X, Save, Pencil, Bell, Search, PinOff
 } from "lucide-react";
@@ -51,7 +52,7 @@ function emptyForm() {
 }
 
 export default function NoticeBoard() {
-  const [notices, setNotices] = useState(initialNotices);
+  const [notices, setNotices] = useLocalStorage("sap_notices", initialNotices);
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
   const [showModal, setShowModal] = useState(false);

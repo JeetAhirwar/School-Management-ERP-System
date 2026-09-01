@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import {
   ShieldCheck, CreditCard, Smartphone, Landmark, CheckCircle2,
   Search, Download, X
@@ -50,7 +51,7 @@ export default function OnlinePayment() {
   const [cardExpiry, setCardExpiry] = useState("");
   const [cardCvv, setCardCvv] = useState("");
   const [bank, setBank] = useState(BANKS[0]);
-  const [payments, setPayments] = useState([]);
+  const [payments, setPayments] = useLocalStorage("sap_online_payments", []);
 
   const filteredStudents = useMemo(() => {
     const q = query.toLowerCase();

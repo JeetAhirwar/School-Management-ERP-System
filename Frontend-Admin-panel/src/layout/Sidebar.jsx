@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 import {
   LayoutDashboard, CalendarCheck, UserPlus, MessageSquare, Bell, BookOpenCheck,
   PartyPopper, CalendarDays, Users, ClipboardList, Wallet, FileBarChart2,
-  BarChart3, Boxes, Bus, CreditCard, GraduationCap, X, ScrollText
+  BarChart3, Boxes, Bus, CreditCard, GraduationCap, X, ScrollText,
+  BookOpen, BedDouble, Banknote
 } from "lucide-react";
 import { school } from "../data/school";
 
@@ -19,6 +20,7 @@ const groups = [
       { to: "/homework", icon: BookOpenCheck, label: "Homework" },
       { to: "/examination", icon: ClipboardList, label: "Examination" },
       { to: "/report-card", icon: ScrollText, label: "Report Card" },
+      { to: "/library", icon: BookOpen, label: "Library Management" },
       { to: "/students", icon: Users, label: "Student Database" },
     ],
   },
@@ -43,6 +45,14 @@ const groups = [
     items: [
       { to: "/inventory", icon: Boxes, label: "Inventory Management" },
       { to: "/bus-tracking", icon: Bus, label: "Bus Tracking" },
+      { to: "/hostel", icon: BedDouble, label: "Hostel Management" },
+    ],
+  },
+  {
+    label: "Human Resources",
+    items: [
+      { to: "/leave", icon: CalendarDays, label: "Leave Management" },
+      { to: "/payroll", icon: Banknote, label: "Payroll / Salary" },
     ],
   },
   {
