@@ -7,8 +7,9 @@ export function StatCard({ icon: Icon, label, value, sub, accent = "amber" }) {
     info: "border-info text-info bg-info/10",
     alert: "border-alert text-alert bg-alert/10",
   };
+  const tone = accents[accent] || accents.amber;
   return (
-    <div className={`bg-white rounded-2xl p-5 border-l-4 ${accents[accent].split(" ")[0]} shadow-sm`}>
+    <div className={`bg-white rounded-2xl p-5 border-l-4 ${tone.split(" ")[0]} shadow-sm`}>
       <div className="flex items-start justify-between">
         <div>
           <p className="text-[12.5px] text-slate-text/80 font-medium">{label}</p>
@@ -16,7 +17,7 @@ export function StatCard({ icon: Icon, label, value, sub, accent = "amber" }) {
           {sub && <p className="text-[11.5px] text-slate-text/60 mt-2">{sub}</p>}
         </div>
         {Icon && (
-          <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${accents[accent].split(" ").slice(1).join(" ")}`}>
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${tone.split(" ").slice(1).join(" ")}`}>
             <Icon size={19} />
           </div>
         )}
